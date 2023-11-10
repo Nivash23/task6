@@ -1,0 +1,21 @@
+Mongodb queries:
+
+1)db.listofproducts.find();
+
+2)db.listofproducts.find({product_price:{$gt:400,$lt:600}});
+
+3)db.listofproducts.find({$or[{product_price:{gt:400}},{product_price:{$lt:600}}]});
+
+4)db.listofproducts.find({product_price:{$gte:500}}).limit(4);
+
+5)db.listofproducts.find({},{product_name:1,product_material:1});
+
+6)db.listofproducts.find({id:{$eq:"10"}});
+
+7)db.listofproducts.find({},{product_name:1,product_material:1,_id:0});
+
+8)db.listofproducts.findOne({product_material:"Soft"});
+
+9)db.listofproducts.find({product_color:"indigo",product_price:492});
+
+10)db.listofproducts.ensureIndex({product_name:1,product_material:1,product_color:1,product_price:1},{unique:true,dropDup:true});
