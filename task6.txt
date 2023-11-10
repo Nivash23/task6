@@ -1,0 +1,172 @@
+1)
+
+class Movie
+{
+    constructor(title, studio, rating)
+    {
+        this._title = title;
+        this._studio = studio;
+        this._rating = rating;
+    }
+    get title()
+    {
+        return `title=${this._title}`;
+    }
+    set title(NewTitle)
+    {
+        this._title = NewTitle;
+    }
+    get studio()
+    {
+        return `studio=${this._studio}`;
+    }
+    set studio(NewStudio) {
+        this._studio = NewStudio;
+    }
+    get rating()
+    {
+        return `rating:${this._rating}`;
+    }
+    set rating(NewRating)
+    {
+        this._rating = NewRating;
+    }
+
+}
+let movies = new Movie('Casino Royal', 'Eon Production');
+// movies.studio = 'eon';
+console.log(movies.rating);
+
+
+2)
+
+class Circle
+{
+    Circle() {
+        let radius = 1.0;
+        let color = 'red';
+    }
+    constructor(radius, color, Area)
+    {
+        this._radius = radius;
+        this._color = color;
+        this._Area = Area;
+    }
+    Circle(radius)
+    {
+        this._radius = radius;
+    }
+    Circle(radius, color)
+    {
+        this._radius = radius;
+        this._color = color;
+    }
+    get radius()
+    {
+        return this._radius;
+    }
+    set radius(radius)
+    {
+        this._radius = radius;
+    }
+    get color()
+    {
+        return this._color;
+    }
+    set color(color)
+    {
+        this._color = color;
+    }
+    circleinfo()
+    {
+        return `Circle[radius=${this._radius},color=${this._color}]`;
+    }
+    get Area()
+    {
+        return this._Area;
+    }
+    get Circumference()
+    {
+        return (2 * (Math.PI) * this._radius);
+    }
+
+    
+}
+let circle = new Circle(5, 'blue', '5cm');
+console.log(circle.Circumference);
+
+3)
+class Person
+{
+    constructor(name, age, gender, address)
+    {
+        this._name = name;
+        this._age = age;
+        this._gender = gender;
+        this._address = address;
+    }
+    get name()
+    {
+        return this._name;
+    }
+    set name(New)
+    {
+        this._name = New;
+    }
+    get age()
+    {
+        return this._age;
+    }
+    set age(New)
+    {
+        this._age = New;
+    }
+    get gender()
+    {
+        return this._gender;
+    }
+    set gender(New)
+    {
+        this._gender = New;
+    }
+    get address()
+    {
+        return this._address;
+    }
+    set address(New)
+    {
+        this._address = New;
+    }
+}
+let person = new Person('Nivash', 20, 'Male', 'coimbatore');
+console.log(person);
+
+4)
+
+class Ubprice
+    {
+    constructor(km,price)
+    {
+        this.Km = km;
+        this.Price = price;
+    }
+    get km()
+    {
+        return this.Km ;
+    }
+    set km(km)
+    {
+        this.Km = km;
+    }
+    get price()
+    {
+        return this.Km * this.Price;
+    }
+    set price(price)
+    {
+        this.Price = price;
+    }
+}
+let UB = new Ubprice(50);
+UB.price = 50;
+console.log(UB.price);
